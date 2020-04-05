@@ -1,0 +1,1 @@
+This is a sample Android studio project
