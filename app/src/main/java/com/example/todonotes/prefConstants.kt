@@ -1,7 +1,7 @@
 package com.example.todonotes
 
-class PrefConstants{
+object PrefConstants{
     val SHARED_PREFERENCE_NAME = "notes_app_pref"
-    val IS_LOGGED_IN : String = "is_logged_in"
-    val FULL_NAME : String = "full_name"
+    val IS_LOGGED_IN = "is_logged_in"
+    val FULL_NAME = "full_name"
 }

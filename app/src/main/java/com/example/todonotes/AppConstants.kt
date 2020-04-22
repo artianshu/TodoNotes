@@ -1,5 +1,7 @@
 package com.example.todonotes
 
-class AppConstants {
-    val Full_Name : String = "full_name"
+object AppConstants {
+    val Full_Name = "full_name"
+    val Title = "title"
+    val Description = "description"
 }

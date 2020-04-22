@@ -16,23 +16,22 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
         setupSharedPreferences()
         checkLoginStatus()
     }
 
     private fun setupSharedPreferences() {
-        sharedPreference = getSharedPreferences(PrefConstants().SHARED_PREFERENCE_NAME, Context.MODE_PRIVATE)
+        sharedPreference = getSharedPreferences(PrefConstants.SHARED_PREFERENCE_NAME, Context.MODE_PRIVATE)
     }
 
     private fun checkLoginStatus() {
-        var isLoggedin : Boolean = sharedPreference.getBoolean(PrefConstants().IS_LOGGED_IN, false)
+        var isLoggedin  = sharedPreference.getBoolean(PrefConstants.IS_LOGGED_IN, false)
         if(isLoggedin){
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)
         }
         else{
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this@SplashActivity, LoginActivity::class.java)
             startActivity(intent)
         }
     }
