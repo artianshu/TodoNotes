@@ -16,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".onBoarding.OnBoardingActivity">
-
         </activity>
         <activity android:name=".view.BlogActivity" />
 
