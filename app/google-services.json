@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "831015771218",
+    "firebase_url": "https://todonotes-1587561002379.firebaseio.com",
+    "project_id": "todonotes-1587561002379",
+    "storage_bucket": "todonotes-1587561002379.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831015771218:android:81d2493fcaac152620938b",
+        "android_client_info": {
+          "package_name": "com.example.todonotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831015771218-toe0q1leal00nm75i1p67hjob5dbjf4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN6T76t_91gBkIXHN0EsfhHMigsqyrjGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831015771218-toe0q1leal00nm75i1p67hjob5dbjf4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

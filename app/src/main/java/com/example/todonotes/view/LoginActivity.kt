@@ -1,15 +1,17 @@
-package com.example.todonotes
+package com.example.todonotes.view
 
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import kotlinx.android.synthetic.main.activity_login.*
-import android.view.View
+import android.widget.Toast
+import com.example.todonotes.utils.AppConstants
+import com.example.todonotes.R
+import com.example.todonotes.utils.StoreSession
 
 class LoginActivity : AppCompatActivity() {
 
@@ -23,26 +25,27 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-        BindView()
         sharedPreferencesSetup()
+        BindView()
 
     }
 
     private fun saveFullName(fullName : String) {
         editor = sharedPreferences.edit()
-        editor.putString(PrefConstants.FULL_NAME, fullName)
+        editor.putString(AppConstants.Full_Name, fullName)
         editor.apply()
     }
 
     private fun saveLoginStatus() {
         editor = sharedPreferences.edit()
-        editor.putBoolean(PrefConstants.IS_LOGGED_IN, true)
+        editor.putBoolean(AppConstants.IS_LOGGED_IN, true)
         editor.apply()
+      //  StoreSession.write(AppConstants.IS_LOGGED_IN, true)
     }
 
     private fun sharedPreferencesSetup() {
-        sharedPreferences = getSharedPreferences(PrefConstants.SHARED_PREFERENCE_NAME, Context.MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences(AppConstants.SHARED_PREFERENCE_NAME, Context.MODE_PRIVATE)
+        //StoreSession.init(this)
     }
 
     private fun BindView() {
@@ -60,11 +63,14 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intent)
                     saveFullName(fullname)
                     saveLoginStatus()
-
                 }
             }
-
         }
         buttonLogin.setOnClickListener(clickAction)
+
+        val name = sharedPreferences.getString(AppConstants.Full_Name,"None")
+
+        Toast.makeText(this, ""+name, Toast.LENGTH_SHORT).show()
+
     }
 }
