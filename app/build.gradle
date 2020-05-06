@@ -35,10 +35,11 @@ dependencies {
 
     //material dependencey
     implementation 'com.google.android.material:material:1.0.0'
-    //DB dependency
+    //RoomDB dependency
     implementation 'androidx.room:room-runtime:2.2.5'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt 'androidx.room:room-compiler:2.2.5'
+
     //Image Dependency
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
@@ -49,6 +50,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:20.1.6'
     //Networking
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
     //Viewpager
     implementation 'androidx.viewpager:viewpager:1.0.0'
 
