@@ -1,5 +1,6 @@
 package com.example.todonotes.view
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -163,7 +164,7 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode==ADD_NOTES_CODE){
+        if(requestCode==ADD_NOTES_CODE && requestCode == Activity.RESULT_OK){
             val title=data?.getStringExtra(AppConstants.Title)
             val description=data?.getStringExtra(AppConstants.Description)
             val imagePath=data?.getStringExtra(AppConstants.IMAGE_PATH)

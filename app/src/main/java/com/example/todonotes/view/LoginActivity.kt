@@ -68,9 +68,5 @@ class LoginActivity : AppCompatActivity() {
         }
         buttonLogin.setOnClickListener(clickAction)
 
-        val name = sharedPreferences.getString(AppConstants.Full_Name,"None")
-
-        Toast.makeText(this, ""+name, Toast.LENGTH_SHORT).show()
-
     }
 }

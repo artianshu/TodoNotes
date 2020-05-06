@@ -163,6 +163,10 @@ class AddNotesActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
     private fun createImage(): File? {
         val timeStamp = SimpleDateFormat("yyyyMMddHHmmss").format(Date())
         val fileName = "JPEG_" + timeStamp + '_'

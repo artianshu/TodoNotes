@@ -26,7 +26,7 @@ class SplashActivity : AppCompatActivity(){
         setContentView(R.layout.activity_splash)
         setupSharedPreferences()
         checkLoginStatus()
-        getFCMToken()
+        //getFCMToken()
     }
 
     private fun getFCMToken() {
@@ -66,5 +66,8 @@ class SplashActivity : AppCompatActivity(){
                 val intent = Intent(this@SplashActivity, OnBoardingActivity::class.java)
                 startActivity(intent)
             }
+
+            finish()
         }
+
 }
