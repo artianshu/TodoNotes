@@ -186,9 +186,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item?.itemId == R.id.blog){
-            val intent=Intent(this@MainActivity,BlogActivity::class.java)
-            startActivity(intent)
+        when {
+            item?.itemId == R.id.blog -> {
+                val intent=Intent(this@MainActivity,BlogActivity::class.java)
+                startActivity(intent)
+            }
+            item?.itemId == R.id.fileSave -> {
+                val intent = Intent(this@MainActivity, FileSystemActivity::class.java)
+                startActivity(intent)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
